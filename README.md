@@ -35,7 +35,7 @@ Este es un proyecto simple para mostrar qué es y cómo se utiliza AOP.
 > | http code     | content-type                      | response                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
 > | `200`         | `application/json;charset=UTF-8`        | json string                                                         |
-
+> | `500`         | `text/html;charset=utf-8`         | None
 </details>
 
 <details>
@@ -52,5 +52,5 @@ Este es un proyecto simple para mostrar qué es y cómo se utiliza AOP.
 > | http code     | content-type                      | response                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
 > | `200`         | `application/json;charset=UTF-8`        | json string                                                         |
-
+> | `500`         | `text/html;charset=utf-8`         | None                                                                |
 </details>

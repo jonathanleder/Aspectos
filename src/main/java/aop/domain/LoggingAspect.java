@@ -25,7 +25,7 @@ public class LoggingAspect {
 	}
 	
 	@AfterThrowing(value = "execution(* aop.domain..*(..))", throwing = "error")
-	public void afterAdvice(JoinPoint jp, Throwable error) {
+	public void afterThrowing(JoinPoint jp, Throwable error) {
 		System.out.println("after throwing: " + error.getMessage());
 	}
 

@@ -54,3 +54,11 @@ Este es un proyecto simple para mostrar qué es y cómo se utiliza AOP.
 > | `200`         | `application/json;charset=UTF-8`        | json string                                                         |
 > | `500`         | `text/html;charset=utf-8`         | None                                                                |
 </details>
+
+## Conceptos 
+
+- **Aspect** (Qué): La lógica que queremos inyectar en nuestro código productivo.
+- **Advice** (Cuándo): ¿Cuándo queremos que la lógica definida en el aspecto corra? En general es **Before** o **After** la ejecución de un método. *Afterthrowing* una excepción específica. O **Around**, antes y después de la ejecución de un método.
+- **Pointcut** (Dónde): ¿En que parte del código productivo queremos que se inyecte la lógica definida en el aspecto?
+
+ 

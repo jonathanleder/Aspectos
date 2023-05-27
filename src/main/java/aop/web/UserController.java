@@ -24,7 +24,12 @@ public class UserController {
 	}
 
 	@GetMapping("/users/{id}")
-	public User usersById(@PathVariable String id) {
-		return this.users.userById(Integer.valueOf(id));		
+	public User usersById(@PathVariable int id) {
+		return this.users.userById(id);		
+	}
+	
+	@GetMapping("/users/search/{username}")
+	public List<User> usersByName(@PathVariable String username) {
+		return this.users.usersByName(username);		
 	}
 }

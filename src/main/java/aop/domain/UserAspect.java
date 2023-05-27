@@ -22,9 +22,9 @@ public class UserAspect {
 	//@After(value = "execution(* aop.domain.DefaultUsers.userById*(..))")
 	public void afterAdvice(JoinPoint point) {
 		System.out.println("after..........");
-		var th = point.getThis();
-		var tar = point.getArgs()[0];
-		System.out.println(tar);
+//		var th = point.getThis();
+//		var tar = point.getArgs()[0];
+//		System.out.println(tar);
 	}
 
 //	@Around(value = "execution(* com.example.demo..*(..))")

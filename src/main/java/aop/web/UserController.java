@@ -32,4 +32,5 @@ public class UserController {
 	public User usersByName(@PathVariable String username) {
 		return this.users.usersByName(username);		
 	}
+	
 }

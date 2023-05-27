@@ -2,7 +2,6 @@ package aop.domain;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
 
@@ -30,6 +29,7 @@ public class DefaultUsers implements Users {
 	}
 
 	@Override
+	@Trace
 	public User usersByName(String userName) {
 		Optional<User> ouser = users.stream()
 				.filter(u -> u.sameUsername(userName))
@@ -38,4 +38,5 @@ public class DefaultUsers implements Users {
 		return ouser.orElseThrow(
 				() -> new RuntimeException("nombre de usuario inexistente"));
 	}
+	
 }

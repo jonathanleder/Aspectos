@@ -4,7 +4,7 @@ Este es un proyecto simple para mostrar qué es y cómo se utiliza AOP.
 
 ## Endpoints
 
-#### Creating new/overwriting existing stubs & proxy configs
+#### Users Endpoints
 
 <details>
  <summary><code>GET</code> <code><b>/users</b></code> <code>Todos los usuarios</code></summary>

@@ -29,7 +29,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/users/search/{username}")
-	public List<User> usersByName(@PathVariable String username) {
+	public User usersByName(@PathVariable String username) {
 		return this.users.usersByName(username);		
 	}
 }

@@ -7,5 +7,5 @@ public interface Users {
 	
 	User userById(int id);
 	
-	List<User> usersByName(String userName);
+	User usersByName(String userName);
 }

@@ -30,11 +30,12 @@ public class DefaultUsers implements Users {
 	}
 
 	@Override
-	public List<User> usersByName(String userName) {
-		List<User> lusers = users.stream()
+	public User usersByName(String userName) {
+		Optional<User> ouser = users.stream()
 				.filter(u -> u.sameUsername(userName))
-				.collect(Collectors.toUnmodifiableList());
+				.findFirst();
 
-		return lusers;
+		return ouser.orElseThrow(
+				() -> new RuntimeException("nombre de usuario inexistente"));
 	}
 }

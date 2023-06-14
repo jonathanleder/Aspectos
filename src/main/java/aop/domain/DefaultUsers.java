@@ -11,8 +11,7 @@ import aop.domain.portsin.Users;
 @Component
 public class DefaultUsers implements Users {
 
-	private static List<User> users = List.of(new User(1, "emolinari"),
-			new User(2, "nabaldo"), new User(3, "japalco"));
+	private static List<User> users = List.of(new User(1, "emolinari"), new User(2, "nabaldo"), new User(3, "japalco"));
 
 	@Override
 	public List<User> users() {
@@ -21,22 +20,17 @@ public class DefaultUsers implements Users {
 
 	@Override
 	public User userById(int id) {
-		Optional<User> ouser = users.stream().filter(u -> u.sameId(id))
-				.findFirst();
+		Optional<User> ouser = users.stream().filter(u -> u.sameId(id)).findFirst();
 
-		return ouser.orElseThrow(
-				() -> new RuntimeException("Id de usuario inválido"));
+		return ouser.orElseThrow(() -> new RuntimeException("Id de usuario inválido"));
 	}
 
 	@Override
 	@Trace
 	public User usersByName(String userName) {
-		Optional<User> ouser = users.stream()
-				.filter(u -> u.sameUsername(userName))
-				.findFirst();
+		Optional<User> ouser = users.stream().filter(u -> u.sameUsername(userName)).findFirst();
 
-		return ouser.orElseThrow(
-				() -> new RuntimeException("nombre de usuario inexistente"));
+		return ouser.orElseThrow(() -> new RuntimeException("nombre de usuario inexistente"));
 	}
-	
+
 }

@@ -4,8 +4,8 @@ import java.util.List;
 
 public interface Users {
 	List<User> users();
-	
+
 	User userById(int id);
-	
+
 	User usersByName(String userName);
 }

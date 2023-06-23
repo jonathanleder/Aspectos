@@ -12,7 +12,7 @@ import aop.domain.Time;
 
 @Component
 public class RegistrarUser {
-	private String jdbcUrl = "jdbc:mysql://localhost:3306/aspectos_poo2"; // Buscar la forma de inyectar dependencia
+	private String jdbcUrl = "jdbc:mysql://localhost:3306/aspectos_poo2";
 	private String username = "root";
 	private String password = "";
 
